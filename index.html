@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indra Gunawan (@naraichi) | Cyberpunk Profile Terminal</title>
+  <meta name="description" content="Profil resmi Indra Gunawan (@naraichi) - IAIN Kerinci FTIK / MTK. Software engineering, AI Agent, Antigravity, OMP, E-Office & E-Shopping.">
+  <meta name="theme-color" content="#070a0f">
+  
+  <!-- Favicon Cyber Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <canvas id="matrix-canvas"></canvas>
+  <div class="scanlines"></div>
+
+  <!-- Cyber Navigation Bar -->
+  <nav class="cyber-nav">
+    <div class="brand-badge">
+      <span class="status-dot"></span>
+      <span class="neon-symbol">&gt;_</span>
+      <span>INDRA.SYS // <span class="glitch-text">@naraichi</span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">// about</a></li>
+      <li><a href="#skills">// skills</a></li>
+      <li><a href="#stats">// stats</a></li>
+      <li><a href="#projects">// projects</a></li>
+      <li><a href="#snake">// snake-matrix</a></li>
+      <li><a href="#contact">// contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="cyber-btn-mini" id="toggle-matrix" title="Toggle Matrix Stream">
+        <span>⚡</span> Matrix: ON
+      </button>
+      <button class="cyber-btn-mini" id="toggle-audio" title="Toggle Cyber Audio Feedback">
+        <span>🔇</span> Sound: OFF
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- 1. HEADER BANNER SECTION (Capsule-Render & Readme-Typing-SVG) -->
+    <header class="header-banner-section" id="home">
+      <!-- Capsule Render Banner -->
+      <div class="banner-capsule-wrapper">
+        <img 
+          src="https://capsule-render.vercel.app/api?type=cylinder&color=0:070a0f,40:081b29,100:023047&height=200&section=header&text=INDRA%20GUNAWAN&fontSize=38&fontAlignY=42&desc=%3C%20%40naraichi%20%7C%20AI%20Agent%20%26%20Software%20Explorer%20%2F%3E&descAlignY=68&descAlign=50&fontColor=00f0ff" 
+          alt="Indra Gunawan Cyberpunk Banner Capsule Render"
+        />
+      </div>
+
+      <!-- Readme Typing SVG Terminal Neon Banner -->
+      <div class="typing-svg-container">
+        <img 
+          src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2600&pause=1200&color=00FF66&center=true&vCenter=true&multiline=true&width=720&height=110&lines=%3E_System.boot(Indra_Gunawan);%3E_Faculty%3A+FTIK+%7C+Major%3A+Tadris+Matematika+(MTK);%3E_Institution%3A+IAIN+Kerinci+%7C+GitHub%3A+%40naraichi;%3E_Research%3A+AI+Agent%2C+Antigravity%2C+OMP%2C+Next-Gen+Web" 
+          alt="Readme Typing SVG Terminal Cyberpunk"
+        />
+      </div>
+    </header>
+
+    <!-- SYSTEM HUD TELEMETRY BAR -->
+    <div class="hud-bar">
+      <div class="hud-item">
+        <div>
+          <div class="hud-label">CAMPUS / FACULTY</div>
+          <div class="hud-value">IAIN Kerinci &bull; FTIK</div>
+        </div>
+      </div>
+      <div class="hud-item green-accent">
+        <div>
+          <div class="hud-label">MAJOR / FOCUS</div>
+          <div class="hud-value">MTK &bull; AI Agent &amp; Dev</div>
+        </div>
+      </div>
+      <div class="hud-item">
+        <div>
+          <div class="hud-label">SYSTEM UPTIME</div>
+          <div class="hud-value" id="system-uptime">00:00:00</div>
+        </div>
+      </div>
+      <div class="hud-item green-accent">
+        <div>
+          <div class="hud-label">LOCAL TIMESTAMP (WIB)</div>
+          <div class="hud-value" id="system-clock">--:--:-- WIB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. ABOUT ME BERGAYA TERMINAL ($ whoami) -->
+    <section class="section-container" id="about">
+      <div class="section-header">
+        <span class="section-tag">01_SYS_INFO</span>
+        <h2 class="section-title">Terminal // About Me</h2>
+      </div>
+
+      <div class="terminal-window">
+        <div class="terminal-titlebar">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="terminal-title">naraichi@iain-kerinci: ~ (zsh)</div>
+          <div class="mono" style="font-size:0.75rem; color:var(--neon-green)">● SECURE PROTOCOL</div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <!-- Command 1: whoami -->
+          <div>
+            <span class="terminal-prompt">naraichi@iain-kerinci:~$</span>
+            <span class="terminal-command">whoami</span>
+          </div>
+          <div class="terminal-output">
+            Indra Gunawan (alias: <span style="color:var(--neon-cyan)">@naraichi</span>)
+          </div>
+
+          <!-- Command 2: cat profile.json -->
+          <div>
+            <span class="terminal-prompt">naraichi@iain-kerinci:~$</span>
+            <span class="terminal-command">cat &lt;&lt; 'EOF' &gt; profile.json</span>
+          </div>
+          <pre class="terminal-output">
+{
+  <span class="json-key">"name"</span>: <span class="json-string">"Indra Gunawan"</span>,
+  <span class="json-key">"handle"</span>: <span class="json-string">"@naraichi"</span>,
+  <span class="json-key">"institution"</span>: <span class="json-string">"IAIN Kerinci"</span>,
+  <span class="json-key">"faculty"</span>: <span class="json-string">"FTIK (Fakultas Tarbiyah dan Ilmu Keguruan)"</span>,
+  <span class="json-key">"major"</span>: <span class="json-string">"Tadris Matematika (MTK)"</span>,
+  <span class="json-key">"primary_mission"</span>: <span class="json-string">"Bridging mathematical precision with cutting-edge software architecture."</span>,
+  <span class="json-key">"active_research"</span>: [
+    <span class="json-string">"AI Agent Ecosystems"</span>,
+    <span class="json-string">"Antigravity Framework"</span>,
+    <span class="json-string">"OMP (Open Multi-Agent Platform)"</span>,
+    <span class="json-string">"Autonomous Task Execution"</span>
+  ],
+  <span class="json-key">"flagship_projects"</span>: [<span class="json-string">"E-Office"</span>, <span class="json-string">"E-Shopping"</span>],
+  <span class="json-key">"system_status"</span>: <span class="json-string">"AVAILABLE FOR COLLABORATION &amp; TECH EXPLORATION"</span>
+}
+          </pre>
+
+          <!-- Command 3: ./status.sh -->
+          <div>
+            <span class="terminal-prompt">naraichi@iain-kerinci:~$</span>
+            <span class="terminal-command">./status.sh --overview</span>
+          </div>
+          <div class="terminal-output">
+            <span style="color:var(--neon-green)">[✓]</span> Menggabungkan pola pikir analitis matematika (MTK) untuk menyusun algoritma efisien.<br>
+            <span style="color:var(--neon-green)">[✓]</span> Berfokus pada arsitektur sistem informasi institusi (E-Office) &amp; e-commerce scalable (E-Shopping).<br>
+            <span style="color:var(--neon-green)">[✓]</span> Eksplorasi aktif: AI Agent, Antigravity, OMP, dan otomasi workflow berbasis GitHub.
+          </div>
+
+          <!-- CLI Interactive Output Area -->
+          <div id="cli-history"></div>
+
+          <!-- Interactive CLI Input -->
+          <div class="terminal-cli-wrapper">
+            <form class="cli-form" id="cli-form">
+              <span class="terminal-prompt">naraichi@iain-kerinci:~$</span>
+              <input 
+                type="text" 
+                id="cli-input" 
+                class="cli-input" 
+                placeholder="Ketik perintah (contoh: help, whoami, skills, projects, contact, clear)..."
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </form>
+            <div class="cli-hints">
+              <span>Quick directives:</span>
+              <span class="cli-chip" data-cmd="help">help</span>
+              <span class="cli-chip" data-cmd="whoami">whoami</span>
+              <span class="cli-chip" data-cmd="profile">profile</span>
+              <span class="cli-chip" data-cmd="skills">skills</span>
+              <span class="cli-chip" data-cmd="projects">projects</span>
+              <span class="cli-chip" data-cmd="date">date</span>
+              <span class="cli-chip" data-cmd="clear">clear</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TECH STACK (Shields.io & Skillicons.dev Tema Gelap) -->
+    <section class="section-container" id="skills">
+      <div class="section-header">
+        <span class="section-tag">02_STACK</span>
+        <h2 class="section-title">Tech Stack &amp; Explorations</h2>
+      </div>
+
+      <div class="skills-container">
+        <!-- AI Agent & Active Explorations -->
+        <div class="skills-category-card" style="border-color: rgba(0, 255, 102, 0.4);">
+          <h3 class="category-title">
+            <span>🧠</span> Yang Sedang Dipelajari / Eksplorasi AI &amp; Agentic Systems
+          </h3>
+          <div class="badge-row">
+            <img src="https://img.shields.io/badge/AI_Agent-00ffcc?style=for-the-badge&logo=openai&logoColor=black" alt="AI Agent Badge">
+            <img src="https://img.shields.io/badge/Antigravity-00e5ff?style=for-the-badge&logo=google&logoColor=black" alt="Antigravity Badge">
+            <img src="https://img.shields.io/badge/OMP_Platform-00ff66?style=for-the-badge&logo=github&logoColor=black" alt="OMP Platform Badge">
+            <img src="https://img.shields.io/badge/Prompt_Engineering-100000?style=for-the-badge&logo=probot&logoColor=00ffcc" alt="Prompt Engineering Badge">
+            <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions Badge">
+            <img src="https://img.shields.io/badge/Autonomous_Reasoning-7928CA?style=for-the-badge&logo=codewars&logoColor=white" alt="Autonomous Reasoning Badge">
+          </div>
+        </div>
+
+        <!-- Languages & Core Tools -->
+        <div class="skills-category-card">
+          <h3 class="category-title">
+            <span>⚡</span> Core Languages &amp; Mathematical Logic
+          </h3>
+          <div class="badge-row">
+            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge">
+            <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge">
+            <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Badge">
+            <img src="https://img.shields.io/badge/SQL-CC292B?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL Badge">
+            <img src="https://img.shields.io/badge/Bash_Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash Badge">
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge">
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge">
+          </div>
+        </div>
+
+        <!-- Web Frameworks & Backend -->
+        <div class="skills-category-card">
+          <h3 class="category-title">
+            <span>🌐</span> Web Frameworks &amp; Architecture
+          </h3>
+          <div class="badge-row">
+            <img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React Badge">
+            <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js Badge">
+            <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js Badge">
+            <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express Badge">
+            <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel Badge">
+            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS Badge">
+            <img src="https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=postman&logoColor=white" alt="REST API Badge">
+          </div>
+        </div>
+
+        <!-- Database & DevOps -->
+        <div class="skills-category-card">
+          <h3 class="category-title">
+            <span>🗄️</span> Database, Git &amp; Environment
+          </h3>
+          <div class="badge-row">
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge">
+            <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL Badge">
+            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git Badge">
+            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=00ffcc" alt="GitHub Badge">
+            <img src="https://img.shields.io/badge/Linux_Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Linux Badge">
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Badge">
+            <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code Badge">
+          </div>
+        </div>
+
+        <!-- Skillicons Dev Visual Strip -->
+        <div class="skillicons-center">
+          <div class="mono" style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            // INTEGRATED SKILLICONS MATRIX //
+          </div>
+          <a href="https://skillicons.dev" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="https://skillicons.dev/icons?i=html,css,js,ts,python,react,nextjs,tailwind,nodejs,express,laravel,mysql,postgres,git,github,docker,linux,bash,postman,vscode&theme=dark" 
+              alt="Skillicons Cyber Dark Matrix" 
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. GITHUB STATS & STREAK (tokyonight, radical, dracula) -->
+    <section class="section-container stats-section" id="stats">
+      <div class="section-header">
+        <span class="section-tag">03_TELEMETRY</span>
+        <h2 class="section-title">GitHub Telemetry &amp; Analytics</h2>
+      </div>
+
+      <!-- Theme Switcher Controls -->
+      <div class="theme-selector-bar">
+        <span>PALETTE MATRIX:</span>
+        <button class="theme-btn active" data-theme="tokyonight">Tokyo Night</button>
+        <button class="theme-btn" data-theme="radical">Radical</button>
+        <button class="theme-btn" data-theme="dracula">Dracula</button>
+        <button class="theme-btn" data-theme="cyberpunk">Cyber Neon</button>
+      </div>
+
+      <div class="stats-grid">
+        <!-- 1. Overall Stats Card -->
+        <div class="stat-card">
+          <img 
+            id="github-stats-img"
+            src="https://github-readme-stats.vercel.app/api?username=naraichi&show_icons=true&theme=tokyonight&hide_border=false&border_color=00f0ff&bg_color=0c1017&title_color=00f0ff&text_color=e6edf3&icon_color=00ff66" 
+            alt="GitHub Stats naraichi"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- 2. Top Languages Card -->
+        <div class="stat-card">
+          <img 
+            id="github-langs-img"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=naraichi&layout=compact&theme=tokyonight&hide_border=false&border_color=00f0ff&bg_color=0c1017&title_color=00f0ff&text_color=e6edf3" 
+            alt="Top Languages naraichi"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- 3. Streak Stats Card -->
+        <div class="stat-card">
+          <img 
+            id="github-streak-img"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=naraichi&theme=tokyonight&border=00f0ff&background=0c1017&ring=00f0ff&fire=00ff66&currStreakLabel=00ff66" 
+            alt="GitHub Streak Stats naraichi"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECT UNGGULAN (Pin Card & Tabel Rapi) -->
+    <section class="section-container projects-section" id="projects">
+      <div class="section-header">
+        <span class="section-tag">04_PROJECTS</span>
+        <h2 class="section-title">Flagship Deployments // Unggulan</h2>
+      </div>
+
+      <!-- Cyber Pin Cards Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: E-Office -->
+        <div class="cyber-card">
+          <div>
+            <span class="project-badge">CAMPUS ENTERPRISE</span>
+            <h3 class="project-title">
+              <span>🏛️</span> E-Office
+            </h3>
+            <p class="project-desc">
+              Sistem informasi administrasi persuratan, disposisi digital, dan manajemen kearsipan kampus/instansi terintegrasi. Dirancang untuk mempercepat birokrasi tanpa kertas (paperless) dengan alur verifikasi bertingkat.
+            </p>
+            <ul class="project-features">
+              <li>Tracking berkas &amp; surat masuk/keluar real-time</li>
+              <li>Sistem disposisi berjenjang &amp; approval digital</li>
+              <li>Manajemen hak akses role-based (RBAC) &amp; audit log</li>
+              <li>Export laporan dinamis &amp; enkripsi arsip dokumen</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">PHP / Laravel</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Document Security</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/naraichi" target="_blank" rel="noopener noreferrer" class="btn-cyber primary">
+              <span>&lt;/&gt;</span> Source Code
+            </a>
+            <button class="btn-cyber" data-copy="E-Office: Sistem Administrasi Persuratan & Disposisi Digital IAIN Kerinci">
+              <span>📋</span> Copy Spec
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2: E-Shopping -->
+        <div class="cyber-card">
+          <div>
+            <span class="project-badge">COMMERCE ENGINE</span>
+            <h3 class="project-title">
+              <span>🛒</span> E-Shopping
+            </h3>
+            <p class="project-desc">
+              Platform e-commerce modern dengan pengelolaan katalog dinamis, keranjang belanja interaktif, integrasi pembayaran, dan dashboard analitik inventaris untuk transaksi cepat dan aman.
+            </p>
+            <ul class="project-features">
+              <li>Katalog produk responsif dengan filter instan</li>
+              <li>Sinkronisasi keranjang &amp; status pesanan real-time</li>
+              <li>Manajemen stok otomatis &amp; rekap inventaris merchant</li>
+              <li>Arsitektur modular siap payment gateway integration</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">JavaScript / React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">E-Commerce</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/naraichi" target="_blank" rel="noopener noreferrer" class="btn-cyber primary">
+              <span>&lt;/&gt;</span> Source Code
+            </a>
+            <button class="btn-cyber" data-copy="E-Shopping: Platform E-Commerce Modern & Manajemen Inventaris Terpadu">
+              <span>📋</span> Copy Spec
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: AI Agent Exploration -->
+        <div class="cyber-card">
+          <div>
+            <span class="project-badge">INTELLIGENT SYSTEM</span>
+            <h3 class="project-title">
+              <span>🤖</span> AI Agent Ecosystem
+            </h3>
+            <p class="project-desc">
+              Eksperimen agen otonom dan orkestrasi multi-agent menggunakan Antigravity dan protokol OMP untuk menyelesaikan tugas komputasi kompleks, penalaran berantai, dan otomasi workflow.
+            </p>
+            <ul class="project-features">
+              <li>Multi-agent communication &amp; role distribution</li>
+              <li>Prompt chain engineering &amp; memory retention</li>
+              <li>Integrasi tool execution via GitHub &amp; shell runner</li>
+              <li>Studi komputasi logika matematika dalam otomasi cerdas</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">AI Agent</span>
+              <span class="tag">Antigravity</span>
+              <span class="tag">OMP</span>
+              <span class="tag">Automated Pipelines</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/naraichi" target="_blank" rel="noopener noreferrer" class="btn-cyber primary">
+              <span>&lt;/&gt;</span> Source Code
+            </a>
+            <button class="btn-cyber" data-copy="AI Agent Ecosystem: Antigravity & OMP Multi-Agent Orchestration">
+              <span>📋</span> Copy Spec
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Specification & Architecture Table -->
+      <div class="table-container">
+        <table class="cyber-table">
+          <thead>
+            <tr>
+              <th>Proyek</th>
+              <th>Kategori / Domain</th>
+              <th>Teknologi Utama</th>
+              <th>Fokus Arsitektur</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--neon-cyan)">🏛️ E-Office</strong></td>
+              <td>Enterprise Campus Office</td>
+              <td>Laravel, MySQL, Tailwind CSS</td>
+              <td>Disposisi surat, paperless digital filing &amp; RBAC</td>
+              <td><span style="color:var(--neon-green)">● Active Deployment</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--neon-cyan)">🛒 E-Shopping</strong></td>
+              <td>E-Commerce &amp; Inventory</td>
+              <td>React, Node.js, Express, PostgreSQL</td>
+              <td>Dynamic cart, modular catalog &amp; checkout flow</td>
+              <td><span style="color:var(--neon-green)">● Active Deployment</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--neon-cyan)">🤖 AI Agent Lab</strong></td>
+              <td>Agentic AI &amp; Reasoning</td>
+              <td>Python, Antigravity, OMP, Shell</td>
+              <td>Autonomous orchestration &amp; multi-agent reasoning</td>
+              <td><span style="color:var(--neon-cyan)">● Research &amp; Prototyping</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. CONTRIBUTION GRAPH / SNAKE ANIMATION (platane/snk) -->
+    <section class="section-container snake-section" id="snake">
+      <div class="section-header">
+        <span class="section-tag">05_SNAKE_GRAPH</span>
+        <h2 class="section-title">Contribution Matrix // Platane Snake Run</h2>
+      </div>
+
+      <div class="snake-card">
+        <p class="mono" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+          Animasi ular kontribusi otomatis (platane/snk) memakan titik commit GitHub @naraichi:
+        </p>
+
+        <!-- Snake SVG Display Container -->
+        <div class="snake-display">
+          <img 
+            id="snake-svg-img"
+            src="https://raw.githubusercontent.com/naraichi/iain.github.io/output/github-contribution-grid-snake-dark.svg" 
+            alt="Snake Contribution Animation Dark"
+          />
+          <!-- Fallback animated canvas jika branch output belum digenerate di repo -->
+          <div id="snake-fallback-canvas-wrapper" style="display:none; width:100%;">
+            <div class="mono" style="font-size:0.75rem; color:var(--neon-green); margin-bottom:6px;">
+              [⚡ SIMULATED CONTRIBUTION MATRIX // SNAKE RUN ONLINE]
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-info-bar">
+          <div>
+            <span>Workflow File:</span> <code>.github/workflows/snake.yml</code> (platane/snk@v3)
+          </div>
+          <button class="cyber-btn-mini" data-copy="gh workflow run snake.yml">
+            <span>📋</span> Copy GH Command
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT / SOSIAL MEDIA SECTION -->
+    <section class="section-container contact-section" id="contact">
+      <div class="section-header">
+        <span class="section-tag">06_CHANNELS</span>
+        <h2 class="section-title">Communication Frequencies // Contact</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Badges & Social Links Card -->
+        <div class="contact-card">
+          <h3 class="category-title"><span>📡</span> Direct Uplink Channels</h3>
+          <p class="mono" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+            Hubungi saya untuk kolaborasi proyek, diskusi riset AI Agent, atau pengembangan web:
+          </p>
+
+          <div class="contact-badges-group">
+            <a href="https://github.com/naraichi" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+              <div class="contact-info">
+                <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=00ffcc" alt="GitHub Badge">
+                <span>@naraichi</span>
+              </div>
+              <span class="mono" style="font-size:0.75rem; color:var(--neon-green);">CONNECT ↗</span>
+            </a>
+
+            <a href="https://linkedin.com/in/naraichi" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+              <div class="contact-info">
+                <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+                <span>Indra Gunawan</span>
+              </div>
+              <span class="mono" style="font-size:0.75rem; color:var(--neon-cyan);">PROFILE ↗</span>
+            </a>
+
+            <div class="contact-link-row" style="cursor:pointer;" data-copy="indra.gunawan@iainkerinci.ac.id">
+              <div class="contact-info">
+                <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge">
+                <span>indra.gunawan@iainkerinci.ac.id</span>
+              </div>
+              <span class="mono" style="font-size:0.75rem; color:var(--neon-green);">COPY 📋</span>
+            </div>
+
+            <a href="https://t.me/naraichi" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+              <div class="contact-info">
+                <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge">
+                <span>@naraichi</span>
+              </div>
+              <span class="mono" style="font-size:0.75rem; color:var(--neon-cyan);">CHAT ↗</span>
+            </a>
+
+            <a href="https://instagram.com/naraichi" target="_blank" rel="noopener noreferrer" class="contact-link-row">
+              <div class="contact-info">
+                <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge">
+                <span>@naraichi</span>
+              </div>
+              <span class="mono" style="font-size:0.75rem; color:var(--neon-cyan);">FOLLOW ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Transmission Box -->
+        <div class="contact-card">
+          <h3 class="category-title"><span>📨</span> Send Encrypted Signal</h3>
+          <p class="mono" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+            Kirimkan pesan instan langsung ke kotak surat elektronik saya:
+          </p>
+
+          <form id="transmission-form" class="transmission-box">
+            <textarea 
+              id="transmission-msg" 
+              class="transmission-input" 
+              rows="5" 
+              placeholder="Tuliskan pesan transmisi Anda di sini... (misal: penawaran kolaborasi, diskusi AI Agent, atau pertanyaan proyek)"
+              required
+            ></textarea>
+            <button type="submit" class="btn-cyber primary" style="width:100%; justify-content:center;">
+              <span>⚡</span> Dispatch Transmission via Email
+            </button>
+          </form>
+
+          <div style="margin-top:1.25rem; font-size:0.78rem; color:var(--text-muted);" class="mono">
+            <span style="color:var(--neon-green);">● PGP STATUS:</span> Standard verified channel<br>
+            <span style="color:var(--neon-cyan);">● LOCATION:</span> Kerinci, Jambi, Indonesia
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- 8. FOOTER DENGAN ANIMASI GELOMBANG & QUOTE -->
+  <footer class="cyber-footer">
+    <!-- Capsule-Render Wave Header/Footer Vector -->
+    <div class="footer-wave-wrapper">
+      <img 
+        src="https://capsule-render.vercel.app/api?type=waving&color=0:070a0f,40:081b29,100:00ffcc&height=130&section=footer" 
+        alt="Cyberpunk Wave Footer Banner"
+      />
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-quote">
+        &ldquo;The pure mathematician, like the musician, is a free creator of his world of ordered beauty.&rdquo;
+        <div class="quote-author">&mdash; Bertrand Russell // Computational Logic Foundation</div>
+      </div>
+
+      <div class="footer-meta">
+        <span><strong style="color:var(--neon-cyan);">INDRA GUNAWAN</strong></span>
+        <span>&bull;</span>
+        <span>FTIK / Tadris Matematika (MTK)</span>
+        <span>&bull;</span>
+        <span>IAIN Kerinci</span>
+        <span>&bull;</span>
+        <span><a href="https://github.com/naraichi" target="_blank" rel="noopener noreferrer">@naraichi</a></span>
+      </div>
+
+      <div class="mono" style="font-size:0.72rem; color:var(--text-muted);">
+        [STATUS: SYSTEM NOMINAL] &bull; [THEME: CYBER NEON DARK] &bull; STATIC HTML ARCHITECTURE
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
